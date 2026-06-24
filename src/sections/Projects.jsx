@@ -10,8 +10,8 @@ const projects = [
     github: "#", */
   },
   {
-    title: "Party Invitation",
-    image: "/projects/project4 copy.png",
+    title: "Business",
+    image: "/projects/project1.png",
   },
   {
     title: "Birthday",

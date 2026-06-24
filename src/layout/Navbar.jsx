@@ -17,8 +17,9 @@ export const Navbar = () => {
   const location = useLocation();
 
   const isCollectionsPage = location.pathname === "/collections";
-
   const isProductPage = location.pathname.startsWith("/product/");
+
+  const hideContactButton = isCollectionsPage || isProductPage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,12 +38,11 @@ export const Navbar = () => {
       }`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
         <Link
           to="/"
           className="text-xl font-bold tracking-tight hover:text-primary"
         >
-          PM<span className="text-primary">.</span>
+          GL<span className="text-primary">.</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -56,21 +56,21 @@ export const Navbar = () => {
                 Home
               </Link>
             ) : isProductPage ? (
-      <>
-        <Link
-          to="/"
-          className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
-        >
-          Home
-        </Link>
+              <>
+                <Link
+                  to="/"
+                  className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
+                >
+                  Home
+                </Link>
 
-        <Link
-          to="/collections"
-          className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
-        >
-          Collections
-        </Link>
-      </>
+                <Link
+                  to="/collections"
+                  className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
+                >
+                  Collections
+                </Link>
+              </>
             ) : (
               homeNavLinks.map((link, index) =>
                 link.href.startsWith("/") ? (
@@ -95,14 +95,16 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* CTA */}
-        
-        <div className="hidden md:block">
-          <Button size="sm">
-            <a href="#contact">Contact Me</a> </Button>
-        </div>
+        {/* Contact Button */}
+        {!hideContactButton && (
+          <div className="hidden md:block">
+            <Button size="sm">
+              <a href="#contact">Contact Me</a>
+            </Button>
+          </div>
+        )}
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Toggle */}
         <button
           className="md:hidden p-2"
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
@@ -124,24 +126,24 @@ export const Navbar = () => {
               >
                 Home
               </Link>
-              ) : isProductPage ? (
-        <>
-          <Link
-            to="/"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="text-lg text-muted-foreground hover:text-foreground py-2"
-          >
-            Home
-          </Link>
+            ) : isProductPage ? (
+              <>
+                <Link
+                  to="/"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-lg text-muted-foreground hover:text-foreground py-2"
+                >
+                  Home
+                </Link>
 
-          <Link
-            to="/collections"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="text-lg text-muted-foreground hover:text-foreground py-2"
-          >
-            Collections
-          </Link>
-        </>
+                <Link
+                  to="/collections"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-lg text-muted-foreground hover:text-foreground py-2"
+                >
+                  Collections
+                </Link>
+              </>
             ) : (
               homeNavLinks.map((link, index) =>
                 link.href.startsWith("/") ? (
@@ -166,12 +168,14 @@ export const Navbar = () => {
               )
             )}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
-              Contact Me
-            </Button>
+            {!hideContactButton && (
+              <Button onClick={() => setIsMobileMenuOpen(false)}>
+                <a href="#contact">Contact Me</a>
+              </Button>
+            )}
           </div>
         </div>
       )}
     </header>
   );
-};  
+};

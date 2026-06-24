@@ -9,7 +9,7 @@ const socialLinks = [
 
 const footerLinks = [
   { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
+  { href: "#projects", label: "Latest" },
   { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" },
 ];
@@ -19,15 +19,17 @@ export const Footer = () => {
   const location = useLocation();
 
   const isCollectionPage = location.pathname === "/collections";
+  const isProductPage = location.pathname.startsWith("/product/");
+
+  const hideFooterLinks = isCollectionPage || isProductPage;
 
   return (
     <footer className="py-12 border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Logo & Copyright */}
           <div className="text-center md:text-left">
             <a href="/" className="text-xl font-bold tracking-tight">
-              PM<span className="text-primary">.</span>
+              GL<span className="text-primary">.</span>
             </a>
 
             <p className="text-sm text-muted-foreground mt-2">
@@ -35,8 +37,7 @@ export const Footer = () => {
             </p>
           </div>
 
-          {/* Hide footer links on Collection page */}
-          {!isCollectionPage && (
+          {!hideFooterLinks && (
             <nav className="flex flex-wrap justify-center gap-6">
               {footerLinks.map((link) => (
                 <a
@@ -50,7 +51,6 @@ export const Footer = () => {
             </nav>
           )}
 
-          {/* Social Links */}
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
               <a
