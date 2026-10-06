@@ -2,10 +2,14 @@ import logo1 from './logo1.png'
 import logo2 from './logo2.png'
 import project1 from './project1.png'
 import project1_1 from './project1_1.png'
+import project1_2 from './project1_2.png'
 import project2 from './project2.png'
 import project3 from './project3.png'
+import project3_1 from './project3_1.png'
+import project3_2 from './project3_2.png'
 import project4 from './project4.png'
-/* import project5 from './project5.png' */
+import project5 from './project5.png' 
+import project5_1 from './project5_1.png'
 import project6 from './project6.png'
 import project7 from './project7.png'
 import project8 from './project8.png'
@@ -16,16 +20,18 @@ import project12 from './project12.png'
 import project12_1 from './project12_1.png'
 import project12_2 from './project12_2.png'
 import project12_3 from './project12_3.png'
-/* import project13 from './project13.png'
-import project14 from './project14.png' */
-/* import project15 from './project15.png' */
+import project13 from './project13.png'
+import project13_1 from './project13_1.png'
+import logo3 from './logo3.png'
+import project15 from './project15.png'
+import project15_1 from './project15_1.png'
 import project16 from './project16.png'
 import project17 from './project17.png'
 import project18 from './project18.png'
 import project19 from './project19.png'
 import project20 from './project20.png'
 import project21 from './project21.png'
-/* import project22 from './project22.png' */
+import project22 from './project22.png'
 import project23 from './project23.png'
 import project24 from './project24.png'
 import project25 from './project25.png'
@@ -33,9 +39,10 @@ import project26 from './project26.png'
 import project27 from './project27.png'
 import project28 from './project28.png'
 import project29 from './project29.png'
-/* import project30 from './project30.png'
+import project30 from './project30.png'
+import project30_1 from './project30_1.png'
 import project31 from './project31.png'
-import project32 from './project32.png'
+/* import project32 from './project32.png'
 import project33 from './project33.png'
 import project34 from './project34.png'
 import project35 from './project35.png'
@@ -43,11 +50,13 @@ import project36 from './project36.png'
 import project37 from './project37.png' */
 import project38 from './project38.png'
 import project39 from './project39.png'
+import project39_1 from './project39_1.png'
 import project40 from './project40.png'
 import project41 from './project41.png'
 import project42 from './project42.png'
 import project43 from './project43.png'
 import project44 from './project44.png'
+import project44_1 from './project44_1.png'
 /* import project45 from './project45.png' */
 import project46 from './project46.png'
 import project47 from './project47.png'
@@ -66,7 +75,7 @@ export const work = [
     },
     {
         _id: "aaaab",
-        image: [project1,project1_1],
+        image: [project1,project1_1,project1_2],
         category: "Business",
     },
     {
@@ -76,7 +85,7 @@ export const work = [
     },
     {
         _id: "aaaad",
-        image: [project3],
+        image: [project3,project3_1,project3_2],
         category: "Business",
     },
     {
@@ -84,11 +93,11 @@ export const work = [
         image: [project4],
         category: "Party",
     },
-    /* {
+    {
         _id: "aaaaf",
-        image: [project5],
-        category: "Party",
-    }, */
+        image: [project5,project5_1],
+        category: "Birthday",
+    },
     {
         _id: "aaaag",
         image: [project6],
@@ -129,21 +138,21 @@ export const work = [
         image: [project12,project12_1,project12_2,project12_3],
         category: "Program",
     },
-    /* {
+    {
         _id: "aaaao",
-        image: [project13],
+        image: [project13,project13_1],
         category: "Program",
-    }, */
-    /* {
+    },
+    {
         _id: "aaaap",
-        image: [project14],
-        category: "Program",
-    }, */
-    /* {
+        image: [logo3],
+        category: "Logo",
+    },
+    {
         _id: "aaaaq",
-        image: [project15],
-        category: "Program",
-    }, */
+        image: [project15,project15_1],
+        category: "Birthday",
+    },
     {
         _id: "aaaar",
         image: [project16],
@@ -174,11 +183,11 @@ export const work = [
         image: [project21],
         category: "Program",
     },
-   /*  {
+    {
         _id: "aaaax",
         image: [project22],
-        category: "Business",
-    }, */
+        category: "Program",
+    },
     {
         _id: "aaaay",
         image: [project23],
@@ -214,16 +223,16 @@ export const work = [
         image: [project29],
         category: "Business",
     },
-    /* {
+    {
         _id: "aaabf",
-        image: [project30],
-        category: "Church",
+        image: [project30,project30_1],
+        category: "Birthday",
     },
     {
         _id: "aaabg",
         image: [project31],
         category: "Business",
-    }, */
+    }, 
     /* {
         _id: "aaabh",
         image: [project32],
@@ -261,8 +270,8 @@ export const work = [
     },
     {
         _id: "aaabo",
-        image: [project39],
-        category: "Business",
+        image: [project39,project39_1],
+        category: "Program",
     },
     {
         _id: "aaabp",
@@ -286,7 +295,7 @@ export const work = [
     },
     {
         _id: "aaabt",
-        image: [project44],
+        image: [project44,project44_1],
         category: "Church",
     },
     /* {

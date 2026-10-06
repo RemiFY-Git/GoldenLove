@@ -11,7 +11,7 @@ const experiences = [
   {
     period: "2024 — Present",
     role: "Mechanical Engineer",
-    company: "Students",
+    company: "Student",
     description:
       "Undergoing studies as a student, to acquire the knowledge needed to excel in the field.",
     technologies: ["React", "AutoCAD", "Python", "PhotoShop"],
