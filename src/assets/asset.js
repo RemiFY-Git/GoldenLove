@@ -25,7 +25,7 @@ import project18 from './project18.png'
 import project19 from './project19.png'
 import project20 from './project20.png'
 import project21 from './project21.png'
-import project22 from './project22.png'
+/* import project22 from './project22.png' */
 import project23 from './project23.png'
 import project24 from './project24.png'
 import project25 from './project25.png'
@@ -174,11 +174,11 @@ export const work = [
         image: [project21],
         category: "Program",
     },
-    {
+   /*  {
         _id: "aaaax",
         image: [project22],
         category: "Business",
-    },
+    }, */
     {
         _id: "aaaay",
         image: [project23],
